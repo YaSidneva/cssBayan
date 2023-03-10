@@ -24,11 +24,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 input,
 button {
   font: inherit;
@@ -71,74 +66,87 @@ li {
 
 button {
   width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   background-color: antiquewhite;
 }
-
 .arrow {
   width: 1em;
-  opacity: 0;
+}
+
+.arrow-up {
+  display: none;
 }
 
 .meme {
+  width: 100%;
   display: none;
   margin: 10px auto;
 }
 
-.active {
+input {
+  display: none;
+}
+
+.switch-trigger {
+ display: block; 
+ width: 100%;
+ margin: 10px auto;
+}
+
+
+input:checked + label  .meme,
+input:checked + label .arrow-up{
+  display: block;
+}
+
+input:checked + label {
   color: black;
-  display: block;
 }
 
-.li:focus ~ .meme,
-.li:active ~ .meme {
-  display: block;
-}
 
-li:active .arrow {
-  opacity: 1;
+input:checked + label .arrow-down {
+  display: none;
 }
-
-li:active .meme {
-  display: block;
-}
-
 
 @media screen and (min-width: 820px) {
-    h1 {
-        font-size: 2em;
-    }
+  h1 {
+    font-size: 2em;
+  }
 
-    h3 {
-        font-size: 1.5em;
-    }
+  h3 {
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-    h1 {
-        font-size: 3em;
-    }
+  h1 {
+    font-size: 3em;
+  }
 
-    h3 {
-        font-size: 2em;
-    }
-
-    ul:hover {
-        cursor: pointer;
-    }
-
-    ul:hover>li {
-        color: black;
-    }
-
-    ul:hover .arrow {
-        opacity: 1;
-    }
-
+  h3 {
+    font-size: 2em;
+  }
   
+  button:hover {
+    cursor: pointer;
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+
+  ul:hover > li {
+    color: black;
+  }
+
+  ul:hover .arrow {
+    opacity: 1;
+  }
 
   li:hover .meme {
     display: block;
   }
 }
-
-
