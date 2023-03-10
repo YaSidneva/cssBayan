@@ -5,57 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
     <title>cssBayan</title>
   </head>
   <body>
     <section>
-      <h1>CSS Bayan. <br>The programmer's reality</h1>
+      <h1>CSS Bayan. The programmer's reality</h1>
       <main>
         <ul>
-          <li>
+          <li class="active">
             <div class="description-button">
-              <h2>And so it always is</h2>
+              <h3>And so it always is</h3>
               <button>
                 <img class="arrow arrow-down" src="icons/arrow-down-solid.svg" alt="" />
               </button>
             </div>
-            <img src="images/reality.jpg" alt="" />
+            <img class="meme active" src="images/reality.jpg" alt="meme-programmer's-help" />
+          </li>
+          <li tabindex="1">
+            <div class="description-button">
+              <h3>Help and support</h3>
+              <button>
+                <img class="arrow arrow-down" src="icons/arrow-down-solid.svg" alt="" />
+              </button>
+            </div>
+            <img class="meme" src="images/senior.jpg" alt="meme-senior-and-juniors" />
+          </li>
+          <li tabindex="2">
+            <div class="description-button">
+              <h3>A little overestimated</h3>
+              <button>
+                <img class="arrow arrow-down" src="icons/arrow-down-solid.svg" alt="" />
+              </button>
+            </div>
+            <img class="meme" src="images/sizes.jpg" alt="meme-size-of-laptop-and-project" />
           </li>
           <li>
             <div class="description-button">
-              <h2>Help and support</h2>
+              <h3>TS vs realisation</h3>
               <button>
                 <img class="arrow arrow-down" src="icons/arrow-down-solid.svg" alt="" />
               </button>
             </div>
-            <img src="images/senior.jpg" alt="" />
+            <img class="meme" src="images/realisation.jpg" alt="meme-differense-between-TS-and-realisation" />
           </li>
           <li>
             <div class="description-button">
-              <h2>A little overestimated</h2>
+              <h3>My relationship with GIT</h3>
               <button>
                 <img class="arrow arrow-down" src="icons/arrow-down-solid.svg" alt="" />
               </button>
             </div>
-            <img src="images/sizes.jpg" alt="" />
-          </li>
-          <li>
-            <div class="description-button">
-              <h2>TS vs realisation</h2>
-              <button>
-                <img class="arrow arrow-down" src="icons/arrow-down-solid.svg" alt="" />
-              </button>
-            </div>
-            <img src="images/realisation.jpg" alt="" />
-          </li>
-          <li>
-            <div class="description-button">
-              <h2>My relationship with GIT</h2>
-              <button>
-                <img class="arrow arrow-down" src="icons/arrow-down-solid.svg" alt="" />
-              </button>
-            </div>
-            <img src="images/git.jpg" alt="" />
+            <img class="meme" src="images/git.jpg" alt="meme-difficulties-with-GIT" />
           </li>
         </ul>
       </main>
