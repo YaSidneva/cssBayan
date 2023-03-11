@@ -74,16 +74,25 @@ button {
 }
 .arrow {
   width: 1em;
+  -moz-transition: all 1s 0.1s ease-in;
+-o-transition: all 1s 0.1s ease-in;
+-webkit-transition: all 1s 0.1s ease-in;
 }
 
-.arrow-up {
+.arrow {
   display: none;
+  -moz-transition: all 1s 0.1s ease-in;
+-o-transition: all 1s 0.1s ease-in;
+-webkit-transition: all 1s 0.1s ease-in;
 }
 
 .meme {
-  width: 100%;
+  width: 50%;
   display: none;
   margin: 10px auto;
+  -moz-transition: all 1s linear;
+-o-transition: all 1s linear;
+-webkit-transition: all 1s linear;
 }
 
 input {
@@ -93,12 +102,11 @@ input {
 .switch-trigger {
  display: block; 
  width: 100%;
- margin: 10px auto;
+ margin: 5% auto;
 }
 
 
-input:checked + label  .meme,
-input:checked + label .arrow-up{
+input:checked + label  .meme{
   display: block;
 }
 
@@ -107,8 +115,10 @@ input:checked + label {
 }
 
 
-input:checked + label .arrow-down {
-  display: none;
+input:checked + label .arrow {
+  -webkit-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+-o-transform: rotate(180deg);
 }
 
 @media screen and (min-width: 820px) {
@@ -143,10 +153,20 @@ input:checked + label .arrow-down {
   }
 
   ul:hover .arrow {
-    opacity: 1;
+    display: block;
   }
 
-  li:hover .meme {
+  li:hover .arrow {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    
+  }
+
+  label:hover .meme {
     display: block;
+    -webkit-transform: scale(0.95);
+-moz-transform: scale(0.95);
+-o-transform: scale(0.95);
   }
 }
