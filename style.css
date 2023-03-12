@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+input,
+button {
+  font: inherit;
+  border: none;
+  padding: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 90%;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+}
+
+li {
+  border-top: 1px solid grey;
+  color: blue;
+}
+
+.description-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+.arrow {
+  width: 1em;
+  -moz-transition: all 1s 0.1s ease-in;
+-o-transition: all 1s 0.1s ease-in;
+-webkit-transition: all 1s 0.1s ease-in;
+}
+
+.arrow {
+  display: none;
+  -moz-transition: all 1s 0.1s ease-in;
+-o-transition: all 1s 0.1s ease-in;
+-webkit-transition: all 1s 0.1s ease-in;
+}
+
+.meme {
+  width: 50%;
+  display: none;
+  margin: 10px auto;
+  -moz-transition: all 1s linear;
+-o-transition: all 1s linear;
+-webkit-transition: all 1s linear;
+}
+
+input {
+  display: none;
+}
+
+.switch-trigger {
+ display: block; 
+ width: 100%;
+ margin: 5% auto;
+}
+
+
+input:checked + label  .meme{
+  display: block;
+}
+
+input:checked + label {
+  color: black;
+}
+
+
+input:checked + label .arrow {
+  -webkit-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+}
+
+@media screen and (min-width: 820px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+
+  ul:hover > li {
+    color: black;
+  }
+
+  ul:hover .arrow {
+    display: block;
+  }
+
+  li:hover .arrow {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    
+  }
+
+  label:hover .meme {
+    display: block;
+    -webkit-transform: scale(0.95);
+-moz-transform: scale(0.95);
+-o-transform: scale(0.95);
+  }
+}
